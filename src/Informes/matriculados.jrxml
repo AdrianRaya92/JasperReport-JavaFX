@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a582ed8a-3042-48d8-b4f6-3eb994096682">
+	<property name="ireport.zoom" value="1.2100000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="dni" class="java.lang.String"/>
+	<field name="siglas" class="java.lang.String"/>
+	<field name="nota" class="java.lang.Double"/>
+	<field name="provincia" class="java.lang.String"/>
+	<filterExpression><![CDATA[$F{siglas}.equals("DI")]]></filterExpression>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="156" y="12" width="214" height="41" forecolor="#FF0000" uuid="ae2cdb55-806a-4d1b-9395-1eccedeffc97"/>
+				<textElement>
+					<font size="24" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Matriculados en DI]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="47" y="2" width="32" height="20" uuid="ef9fd7e8-250a-4625-9760-3d8b5175693d"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="2" width="66" height="20" uuid="6937da7f-5d18-44f2-8f5c-d7297f4ea118"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODULO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="2" width="57" height="20" uuid="aa0cd369-9734-4deb-9e45-c631b8b600d7"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="2" width="79" height="20" uuid="44f8a14b-bef4-4af5-9a09-61268f5a1d19"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVINCIA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="38" width="555" height="1" uuid="9e74b589-a9e7-465b-9305-8e755533ff5b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="28" y="0" width="100" height="20" uuid="6b31f2c6-c530-4880-b1cd-b22fb6747eef"/>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="52" height="20" uuid="4b0bb64e-15bb-4544-aab4-84d0f0e5904a"/>
+				<textFieldExpression><![CDATA[$F{siglas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="0" width="47" height="20" uuid="2fb01abd-bd54-4e57-81f6-5fc5de3e1a20"/>
+				<textFieldExpression><![CDATA[$F{nota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="100" height="20" uuid="f7a64af1-3e19-43e8-b2f8-720318da1ed6"/>
+				<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
